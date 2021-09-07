@@ -42,11 +42,13 @@ export default function Squares() {
     // (unless it already is, in which case we should reset
     // the currently active square id back to initial state).
 
-    if(activeSquare === null || activeSquare) {
-      setActiveSquare(id)
-    } if(activeSquare === id){
-      setActiveSquare(null);
-    }
+
+    (activeSquare === id ? setActiveSquare(null) : setActiveSquare(id))
+    // if(activeSquare === null || activeSquare) {
+    //   setActiveSquare(id)
+    // } if(activeSquare === id){
+    //   setActiveSquare(null);
+    // }
   };
 
   return (
